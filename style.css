@@ -1,0 +1,115 @@
+/* Overall page background and font */
+body {
+  background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0 20px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Center the main heading */
+h1 {
+  text-align: center;
+  margin: 40px 0 30px;
+  color: #222;
+  font-weight: 700;
+  font-size: 2.5rem;
+}
+
+/* Form container stays the same */
+#book-form {
+  width: 100%;
+  max-width: 600px;
+  background-color: rgba(255, 255, 255, 0.85);
+  padding: 25px 30px;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center content horizontally */
+}
+
+/* Labels */
+#book-form label {
+  align-self: flex-start; /* Align labels to left edge inside centered container */
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #333;
+  width: 100%;
+}
+
+/* Inputs */
+#book-form input {
+  width: 100%;
+  padding: 12px 14px;
+  margin-bottom: 20px;
+  border: 1.8px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+  box-sizing: border-box;
+}
+
+#book-form input:focus {
+  border-color: #007BFF;
+  outline: none;
+}
+
+/* Buttons container to align buttons side by side */
+#book-form .button-group {
+  display: flex;
+  justify-content: center;
+  gap: 20px; /* space between buttons */
+  width: 100%;
+  margin-top: 10px;
+}
+
+/* Style for both buttons */
+#book-form button {
+  flex: 1; /* buttons share equal width */
+  padding: 14px;
+  background-color: #007BFF;
+  border: none;
+  color: white;
+  font-size: 1.15rem;
+  font-weight: 700;
+  border-radius: 7px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  max-width: 150px;
+}
+
+#book-form button.reset-btn {
+  background-color: #6c757d;
+}
+
+#book-form button.reset-btn:hover {
+  background-color: #5a6268;
+}
+
+#book-form button:hover {
+  background-color: #0056b3;
+}
+
+/* Responsive adjustments */
+@media (max-width: 640px) {
+  #book-form, #books-list {
+    max-width: 100%;
+    margin: 20px 10px;
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 2rem;
+    margin: 30px 0 20px;
+  }
+
+  #books-list th, #books-list td {
+    font-size: 0.9rem;
+    padding: 12px 10px;
+  }
+}
